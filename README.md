@@ -14,7 +14,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 - [TypeORM](https://typeorm.io/) as DB ORM
 - Pure [WebSocket](https://www.npmjs.com/package/websocket) or [SocketIO](https://socket.io/) for real time messages
 
-## Diagrms
+## Diagrams
 
 [WebSocket diagram](https://lohikaonline-my.sharepoint.com/:i:/g/personal/vbondarenko_lohika_com1/ETwW_l81ZdlIp1WR3TfR0d0Bz2wSFaLaql1HMz4NljosGg?e=wkj90H) 
 
