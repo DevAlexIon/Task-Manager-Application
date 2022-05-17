@@ -12,7 +12,6 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 - [NestJS](https://nestjs.com/) as a server framework
 - [TypeORM](https://reactjs.org/) as DB ORM
 - Pure [WebSocket](https://www.npmjs.com/package/websocket) or [SocketIO](https://socket.io/) for real time messages
-- 
 
 ## Add your files
 
