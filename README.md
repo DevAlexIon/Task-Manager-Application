@@ -14,6 +14,10 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 - [TypeORM](https://typeorm.io/) as DB ORM
 - Pure [WebSocket](https://www.npmjs.com/package/websocket) or [SocketIO](https://socket.io/) for real time messages
 
+## Diagrms
+
+[WebSocket diagram](https://lohikaonline-my.sharepoint.com/:u:/r/personal/vbondarenko_lohika_com1/Documents/Untitled%20Diagram.drawio?csf=1&web=1&e=kaAooI) 
+
 ## Add your files
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
