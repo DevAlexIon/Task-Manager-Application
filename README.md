@@ -1,17 +1,18 @@
 # Universal project React Node.js
 
-## Tech stack
-
-- React
-- NodeJs
-- TypeORM
-- WebSocket or SocketIO
-
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
 Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+
+## Tech stack
+
+- React for rendering on clinet side
+- [NestJS](https://nestjs.com/) as a server framework
+- [TypeORM](https://reactjs.org/) as DB ORM
+- Pure [WebSocket](https://www.npmjs.com/package/websocket) or [SocketIO](https://socket.io/) for real time messages
+- 
 
 ## Add your files
 
