@@ -16,7 +16,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ## Diagrms
 
-[WebSocket diagram](https://lohikaonline.sharepoint.com/:u:/s/Universalproject/EeQnZicuvOdPgp4kil72LT0BK4EiLfgdk3jNNJuHx_KEXg?e=IDA6dr) 
+[WebSocket diagram](https://lohikaonline-my.sharepoint.com/:i:/g/personal/vbondarenko_lohika_com1/ETwW_l81ZdlIp1WR3TfR0d0Bz2wSFaLaql1HMz4NljosGg?e=wkj90H) 
 
 ## Add your files
 
