@@ -1,6 +1,11 @@
 # Universal project React Node.js
 
+## Tech stack
 
+- React
+- NodeJs
+- TypeORM
+- WebSocket or SocketIO
 
 ## Getting started
 
