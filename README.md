@@ -8,6 +8,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ## Tech stack
 
+- [TypeScript](https://www.typescriptlang.org/) for static typisation
 - [React](https://reactjs.org/) for rendering on clinet side
 - [NestJS](https://nestjs.com/) as a server framework
 - [TypeORM](https://typeorm.io/) as DB ORM
