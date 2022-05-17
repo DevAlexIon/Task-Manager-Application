@@ -8,9 +8,9 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ## Tech stack
 
-- React for rendering on clinet side
+- [React](https://reactjs.org/) for rendering on clinet side
 - [NestJS](https://nestjs.com/) as a server framework
-- [TypeORM](https://reactjs.org/) as DB ORM
+- [TypeORM](https://typeorm.io/) as DB ORM
 - Pure [WebSocket](https://www.npmjs.com/package/websocket) or [SocketIO](https://socket.io/) for real time messages
 
 ## Add your files
