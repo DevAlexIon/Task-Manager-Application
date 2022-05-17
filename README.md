@@ -16,7 +16,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ## Diagrams
 
-[WebSocket diagram](https://lohikaonline-my.sharepoint.com/:i:/g/personal/vbondarenko_lohika_com1/ETwW_l81ZdlIp1WR3TfR0d0Bz2wSFaLaql1HMz4NljosGg?e=wkj90H) 
+[WebSockets messages flow](https://lohikaonline-my.sharepoint.com/:i:/g/personal/vbondarenko_lohika_com1/ETwW_l81ZdlIp1WR3TfR0d0Bz2wSFaLaql1HMz4NljosGg?e=wkj90H) 
 
 ## Add your files
 
