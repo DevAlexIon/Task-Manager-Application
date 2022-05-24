@@ -1,5 +1,10 @@
 # Universal project React Node.js
 
+## Purpose
+
+The purpose of the project is to improve your technical skills to the level of a strong ME, by completing practical tasks and implementing a training project.
+
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
