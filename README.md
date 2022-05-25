@@ -11,62 +11,62 @@ The aim of the project is to create a convenient task tracker (similar to a trel
 ## Functional structure of the project
 
 1.	Notification center
-1.1.	Auto update (e.g. push, long polling)
-1.2.	Quick access button with badge (in header)
-1.3.	List of recent updates (e.g. task changes, new members, board updates, etc.)
-1.4.	Clear all button (mark all read)
+1.1. Auto update (e.g. push, long polling)
+1.2. Quick access button with badge (in header)
+1.3. List of recent updates (e.g. task changes, new members, board updates, etc.)
+1.4. Clear all button (mark all read)
 
 2.	Authorization / registration
-2.1.	Login/password
-2.2.	OAuth (Microsoft)
-2.3.	Forgot password (probably optional)
-3.	Boards
+2.1. Login/password
+2.2. OAuth (Microsoft)
+2.3. Forgot password (probably optional)
 
-3.1.	CRUD (TBD)
-3.2.	Add/remove members
-3.3.	Columns management
-3.3.1.	 Add/remove columns
-3.3.2.	 Assign statuses/tags for each column (TBD)
-3.3.3.	 Tasks D-n-D
-3.3.4.	 Minified task view (ID, (assignee, status, summary, tags, etc.)
+3.	Boards
+3.1. CRUD (TBD)
+3.2. Add/remove members
+3.3. Columns management
+3.3.1. Add/remove columns
+3.3.2. Assign statuses/tags for each column (TBD)
+3.3.3. Tasks D-n-D
+3.3.4. Minified task view (ID, (assignee, status, summary, tags, etc.)
 
 4.	Story / Task
-4.1.	Story CRUD
-4.2.	Task CRUD (+related story, task type, TBD)
+4.1. Story CRUD
+4.2. Task CRUD (+related story, task type, TBD)
 
 5.	Forms
-5.1.	 Text inputs, textareas, checkboxes, radio buttons
-5.2.	 Dropdowns
-5.3.	 Autocomplete fields (e.g. tags)
-5.4.	 Datepicker (timezone configuration/selection)
-5.5.	 Upload files (multi-upload)
-5.6.	 Form submit status (e.g. loading indicator) or optimistic updates with toasts
-5.7.	 Unsaved changes warning
-5.8.	 Linked fields + cross fields validation (TBD)
-5.9.	 Vlidation
+5.1. Text inputs, textareas, checkboxes, radio buttons
+5.2. Dropdowns
+5.3. Autocomplete fields (e.g. tags)
+5.4. Datepicker (timezone configuration/selection)
+5.5. Upload files (multi-upload)
+5.6. Form submit status (e.g. loading indicator) or optimistic updates with toasts
+5.7. Unsaved changes warning
+5.8. Linked fields + cross fields validation (TBD)
+5.9. Vlidation
 
 6.	Tags
-6.1.	CRUD
-6.2.	Upsert (during tasks creation)
+6.1. CRUD
+6.2. Upsert (during tasks creation)
 
 7.	Report
-7.1.	Date range
-7.2.	Filter (assignee, tags, story)
-7.3.	Cumulative flow chart
-7.4.	Burndown chart (TBD)
-7.5.	Pie chart (TBD)
+7.1. Date range
+7.2. Filter (assignee, tags, story)
+7.3. Cumulative flow chart
+7.4. Burndown chart (TBD)
+7.5. Pie chart (TBD)
 
 8.	Search
-8.1.	Quick search (in header)
-8.2.	Suggested terms
-8.3.	List of found tasks/stories
-8.4.	Highlighted matches (assignee, tags, summary, description)
+8.1. Quick search (in header)
+8.2. Suggested terms
+8.3. List of found tasks/stories
+8.4. Highlighted matches (assignee, tags, summary, description)
 
 9.	Mobile Version
-9.1.	Simplified card view
-9.2.	Burger menu
-9.3.	Board view
-9.4.	Login/Registration forms
+9.1. Simplified card view
+9.2. Burger menu
+9.3. Board view
+9.4. Login/Registration forms
 
 
 ## Getting started
