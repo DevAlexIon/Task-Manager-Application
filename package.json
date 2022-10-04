@@ -12,7 +12,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "lerna run start",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "client-lint":"lerna run lint --scope web-client",
+    "server-lint": "lerna run lint --scope server-api"
   },
   "workspaces": [
     "packages/*"

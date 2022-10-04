@@ -1,0 +1,29 @@
+image: node
+
+cache:
+  paths:
+      - node_modules
+
+stages:
+- lint client
+- lint server
+- testing
+
+EsLint client:
+ stage: lint client
+ script:
+  - npm i
+  - npm run client-lint
+ rules:
+  - changes:
+    - packages/web-client/*
+
+EsLint server:
+ stage: lint server
+ script:
+  - npm i
+  - npm run server-lint
+ rules:
+  - changes:
+    - packages/server-api/*
+
