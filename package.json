@@ -11,13 +11,16 @@
   "name": "ion-alexandru",
   "version": "1.0.0",
   "scripts": {
-    "start": "lerna run start",
+    "dev": "lerna run dev",
     "lint": "lerna run lint",
-    "client-lint":"lerna run lint --scope web-client",
+    "client-lint": "lerna run lint --scope web-client",
     "server-lint": "lerna run lint --scope server-api",
     "test:e2e": "lerna run test:e2e"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "axios": "^1.0.0"
+  }
 }
