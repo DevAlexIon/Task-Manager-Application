@@ -8,13 +8,20 @@ stages:
 - lint client
 - lint server
 - backend-e2e-test
-- testing
+- frontend-unit-test
 
 EsLint client:
  stage: lint client
  script:
   - npm i
   - npm run client-lint
+ rules:
+  - changes:
+    - packages/web-client/*
+ stage: frontend-unit-test
+ script:
+  - npm i
+  - npm run frontend-unit-test
  rules:
   - changes:
     - packages/web-client/*
