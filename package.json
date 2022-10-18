@@ -15,8 +15,8 @@
     "lint": "lerna run lint",
     "client-lint": "lerna run lint --scope web-client",
     "server-lint": "lerna run lint --scope server-api",
-    "test:e2e": "lerna run test:e2e",
-    "frontend-unit-test": "lerna run test --scope web-client"
+    "frontend-unit-test": "lerna run test --scope web-client",
+    "backend-unit-test": "lerna run test --scope server-api"
   },
   "workspaces": [
     "packages/*"

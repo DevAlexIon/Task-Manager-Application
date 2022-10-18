@@ -18,17 +18,24 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./app.spec.ts",
+    "typeorm": "typeorm-ts-node-esm -d ./typeOrm.config.ts ",
+    "typeorm:run-migrations": "npm run typeorm migration:run",
+    "typeorm:generate-migrations": "npm run typeorm migration:generate"
   },
   "dependencies": {
     "@nestjs/axios": "^0.1.0",
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/terminus": "^9.1.2",
+    "@nestjs/typeorm": "^9.0.1",
+    "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "typeorm": "^0.3.10"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
@@ -54,6 +61,7 @@
     "typescript": "^4.7.4"
   },
   "jest": {
+
     "moduleFileExtensions": [
       "js",
       "json",

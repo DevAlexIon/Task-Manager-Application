@@ -9,6 +9,7 @@ stages:
 - lint server
 - backend-e2e-test
 - frontend-unit-test
+- db-test
 
 EsLint client:
  stage: lint client
@@ -34,10 +35,21 @@ EsLint server:
  rules:
   - changes:
     - packages/server-api/*
+ stage: db-test
+ services:
+  - postgres
+ variables:
+  POSTGRES_DB: postgres
+  POSTGRES_USERNAME: postgres
+  POSTGRES_HOST_AUTH_METHOD: trust
+ image: postgres
+ script:
+  - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
+ image: node
  stage: backend-e2e-test
  script:
   - npm i
-  - npm run test:e2e
+  - npm run backend-unit-test
  rules:
   - changes:
     - packages/server-api/*
