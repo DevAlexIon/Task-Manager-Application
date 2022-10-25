@@ -8,14 +8,9 @@ const nextConfig = {
         source: '/api/health',
         destination: 'http://localhost:3001/health',
       },
-    ];
-  },
-  async redirects() {
-    return [
       {
-        source: '/',
-        destination: '/home',
-        permanent: true,
+        source: '/:path*',
+        destination: '/',
       },
     ];
   },
