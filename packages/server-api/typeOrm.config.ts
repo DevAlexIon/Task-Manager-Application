@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm';
 import { ConfigService } from '@nestjs/config';
 import { config } from 'dotenv';
-import { PostRefactoring1665473280490 } from './migrations/PostRefactoring1665473280490';
+import { UserEntity } from './src/users/entity/user.entity';
 
 config();
 
@@ -14,6 +14,6 @@ export default new DataSource({
   username: configService.get('POSTGRES_USERNAME'),
   password: configService.get('POSTGRES_PASSWORD'),
   database: configService.get('POSTGRES_DB'),
-  entities: [],
-  migrations: [PostRefactoring1665473280490],
+  entities: [UserEntity],
+  migrations: ['./migrations/**/*{.ts,.js}'],
 });

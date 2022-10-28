@@ -42,6 +42,7 @@ EsLint server:
   POSTGRES_DB: postgres
   POSTGRES_USERNAME: postgres
   POSTGRES_HOST_AUTH_METHOD: trust
+  SECRETKEY : $SECRETKEY
  image: postgres
  script:
   - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
