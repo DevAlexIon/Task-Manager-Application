@@ -33,4 +33,50 @@ describe('AppController (e2e)', () => {
   afterAll(async () => {
     await app.close();
   });
+  describe('Authentication', () => {
+    let jwtToken: string;
+
+    describe('AuthModule', () => {
+      it('authenticates user with valid credentials and provides a jwt token', async () => {
+        const response = await request(app.getHttpServer())
+          .post('/auth/login')
+          .send({ email: '1@yahoo.com', password: '1' })
+          .expect(201);
+
+        jwtToken = response.body.accessToken;
+        expect(jwtToken).toMatch(
+          /^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$/,
+        );
+      });
+
+      it('fails to authenticate user with an incorrect password', async () => {
+        const response = await request(app.getHttpServer())
+          .post('/auth/login')
+          .send({ email: '1@yahoo.com', password: 'wrong' })
+          .expect(401);
+
+        expect(response.body.accessToken).not.toBeDefined();
+      });
+
+      it('fails to authenticate user that does not exist', async () => {
+        const response = await request(app.getHttpServer())
+          .post('/auth/login')
+          .send({ email: 'nobody@example.com', password: 'test' })
+          .expect(401);
+
+        expect(response.body.accessToken).not.toBeDefined();
+      });
+    });
+
+    describe('Protected', () => {
+      it('gets protected resource with jwt authenticated request', async () => {
+        const response = await request(app.getHttpServer())
+          .get('/auth/protected')
+          .set('Authorization', `Bearer ${jwtToken}`)
+          .expect(200);
+
+        const data = response.body.data;
+      });
+    });
+  });
 });

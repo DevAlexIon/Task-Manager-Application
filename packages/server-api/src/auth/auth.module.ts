@@ -20,14 +20,14 @@ import { JwtStrategy } from './jwt.strategy';
       useFactory: async (configService: ConfigService) => ({
         secret: configService.get('SECRETKEY'),
         signOptions: {
-          expiresIn: 3000,
+          expiresIn: configService.get('EXPIRESIN'),
         },
       }),
       inject: [ConfigService],
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, JwtStrategy],
+  providers: [AuthService, JwtStrategy, ConfigService],
   exports: [PassportModule, JwtModule],
 })
 export class AuthModule {}
