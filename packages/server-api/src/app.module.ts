@@ -21,7 +21,6 @@ import { AuthModule } from './auth/auth.module';
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DB'),
         entities: [UserEntity],
-        synchronize: true,
         autoLoadEntities: true,
       }),
       inject: [ConfigService],

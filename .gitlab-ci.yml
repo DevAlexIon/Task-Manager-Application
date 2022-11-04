@@ -50,6 +50,10 @@ EsLint server:
  stage: backend-e2e-test
  script:
   - npm i
+  - cd packages/server-api
+  - npm run typeorm:run-migrations
+  - cd ..
+  - cd ..
   - npm run backend-unit-test
  rules:
   - changes:
