@@ -1,10 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import Register from '../pages/routes/register';
-import '@testing-library/jest-dom';
+const { render } = require('@testing-library/react');
+const { createMemoryHistory } = require('history');
+const React = require('react');
+const { Router } = require('react-router-dom');
 
-it('Home should be rendered', () => {
-  render(<Register />);
-
-  const myElement = screen.getByText('Register Page!');
-  expect(myElement).toBeInTheDocument();
+it('works', () => {
+  const history = createMemoryHistory();
+  render(
+    <Router location={history.location} navigator={history} />,
+  );
 });

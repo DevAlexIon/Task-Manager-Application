@@ -25,6 +25,8 @@
   ],
   "dependencies": {
     "@types/passport-jwt": "^3.0.7",
-    "axios": "^1.0.0"
+    "axios": "^1.0.0",
+    "formik": "^2.2.9",
+    "yup": "^0.32.11"
   }
 }
