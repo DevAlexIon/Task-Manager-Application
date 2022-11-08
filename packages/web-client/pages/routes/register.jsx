@@ -7,7 +7,7 @@ import {
 } from 'formik';
 import * as Yup from 'yup';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const initialValues = {
   email: '',
@@ -24,7 +24,7 @@ const validationSchema = Yup.object({
 
 export default function Register() {
   const [data, setData] = useState([]);
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const saveRegister = (values) => {
     fetch('http://localhost:3001/auth/register', {
@@ -48,7 +48,7 @@ export default function Register() {
             throw error;
           }
         }
-        navigate('/login');
+        history.push('/login');
         return response.json();
       }).then((result) => {
         setData(result);

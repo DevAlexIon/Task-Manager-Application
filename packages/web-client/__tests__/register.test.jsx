@@ -1,11 +1,13 @@
+import { createBrowserHistory } from 'history';
+
 const { render } = require('@testing-library/react');
-const { createMemoryHistory } = require('history');
+
 const React = require('react');
 const { Router } = require('react-router-dom');
 
 it('works', () => {
-  const history = createMemoryHistory();
+  const newHistory = createBrowserHistory();
   render(
-    <Router location={history.location} navigator={history} />,
+    <Router history={newHistory} />,
   );
 });

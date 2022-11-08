@@ -1,11 +1,17 @@
 import { AppProps } from 'next/app';
+import { useEffect, useState } from 'react';
 
 function App({ Component, pageProps }: AppProps) {
-  return (
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  useEffect(() => {
+    setIsBrowser(typeof window !== 'undefined');
+  }, []);
+  return isBrowser ? (
     <div suppressHydrationWarning>
-      {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+      <Component {...pageProps} />
     </div>
-  );
+  ) : null;
 }
 
 export default App;
