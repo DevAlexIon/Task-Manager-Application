@@ -1,6 +1,17 @@
 import Head from 'next/head';
+import { useHistory } from 'react-router-dom';
+import { useIsAuthenticated } from 'react-auth-kit';
 
 export default function Home() {
+  const isAuthenticated = useIsAuthenticated();
+  const history = useHistory();
+
+  if (isAuthenticated()) {
+    history.replace('/home');
+  } else {
+    history.replace('/login');
+  }
+
   return (
 
     <div>

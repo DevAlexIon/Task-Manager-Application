@@ -7,7 +7,7 @@ import {
 } from 'formik';
 import * as Yup from 'yup';
 import { useState } from 'react';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import { useSignIn } from 'react-auth-kit';
 import { useHistory } from 'react-router-dom';
 
@@ -40,7 +40,7 @@ export default function Login() {
     } catch (err) {
       setError(err?.response?.data?.message || err?.message);
     }
-    history.push('/home');
+    history.replace('/home');
   };
 
   const onSubmit = (values, { setSubmitting }) => {
