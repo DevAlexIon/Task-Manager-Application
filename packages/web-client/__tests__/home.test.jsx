@@ -1,10 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import Home from '../pages/routes/home';
-import '@testing-library/jest-dom';
+import { createBrowserHistory } from 'history';
 
-it('Home should be rendered', () => {
-  render(<Home />);
+const { render } = require('@testing-library/react');
 
-  const myElement = screen.getByText('Home Page!');
-  expect(myElement).toBeInTheDocument();
+const React = require('react');
+const { Router } = require('react-router-dom');
+
+it('works', () => {
+  const newHistory = createBrowserHistory();
+  render(
+    <Router history={newHistory} />,
+  );
 });
