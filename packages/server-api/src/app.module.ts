@@ -17,7 +17,7 @@ import { Boards } from './boards/entity/boards.entity';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        host: 'localhost',
+        host: 'postgres',
         port: Number(configService.get('POSTGRES_PORT')),
         username: configService.get('POSTGRES_USERNAME'),
         password: configService.get('POSTGRES_PASSWORD'),
