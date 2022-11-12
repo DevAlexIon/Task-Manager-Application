@@ -10,7 +10,7 @@ const configService = new ConfigService();
 
 export default new DataSource({
   type: 'postgres',
-  host: 'postgres',
+  host: 'localhost',
   port: configService.get('POSTGRES_PORT'),
   username: configService.get('POSTGRES_USERNAME'),
   password: configService.get('POSTGRES_PASSWORD'),

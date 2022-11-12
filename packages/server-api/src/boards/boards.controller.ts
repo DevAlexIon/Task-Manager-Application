@@ -1,4 +1,11 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  ClassSerializerInterceptor,
+  Controller,
+  Post,
+  UseGuards,
+  UseInterceptors,
+} from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { BoardsService } from './boards.service';
 import { Boards } from './entity/boards.entity';
@@ -11,6 +18,7 @@ export class BoardsController {
   constructor(private boardsService: BoardsService) {}
 
   @Post()
+  @UseInterceptors(ClassSerializerInterceptor)
   createBoard(
     @Body() createBoardDto: CreateBoardDto,
     user: UserEntity,

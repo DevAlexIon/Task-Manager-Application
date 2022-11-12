@@ -18,7 +18,7 @@ export class UserEntity {
     unique: true,
   })
   email: string;
-  @Exclude({ toPlainOnly: true })
+  @Exclude()
   @Column({
     type: 'varchar',
     nullable: false,
