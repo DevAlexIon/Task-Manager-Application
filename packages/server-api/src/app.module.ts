@@ -7,6 +7,8 @@ import { HealthModule } from './health/health.module';
 import { UserEntity } from './users/entity/user.entity';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { BoardsModule } from './boards/boards.module';
+import { Boards } from './boards/entity/boards.entity';
 
 @Module({
   imports: [
@@ -20,13 +22,14 @@ import { AuthModule } from './auth/auth.module';
         username: configService.get('POSTGRES_USERNAME'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DB'),
-        entities: [UserEntity],
+        entities: [UserEntity, Boards],
         autoLoadEntities: true,
       }),
       inject: [ConfigService],
     }),
     UsersModule,
     AuthModule,
+    BoardsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

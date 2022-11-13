@@ -1,4 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Boards } from '../../boards/entity/boards.entity';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToMany,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
+import { Exclude } from 'class-transformer';
 
 @Entity('user')
 export class UserEntity {
@@ -9,6 +18,7 @@ export class UserEntity {
     unique: true,
   })
   email: string;
+  @Exclude({ toPlainOnly: true })
   @Column({
     type: 'varchar',
     nullable: false,
@@ -19,4 +29,13 @@ export class UserEntity {
     nullable: false,
   })
   username: string;
+
+  @OneToMany(() => Boards, (board) => board.owner, { eager: true })
+  boards: Boards[];
+
+  @ManyToMany(() => Boards, (board) => board.members, {
+    cascade: true,
+  })
+  @JoinTable()
+  board: Boards[];
 }
