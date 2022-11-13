@@ -40,7 +40,7 @@ describe('AppController (e2e)', () => {
       it('authenticates user with valid credentials and provides a jwt token', async () => {
         const response = await request(app.getHttpServer())
           .post('/auth/login')
-          .send({ email: 'da@yahoo.com', password: 'da' })
+          .send({ email: '1@yahoo.com', password: '1' })
           .expect(201);
 
         jwtToken = response.body.accessToken;
